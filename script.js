@@ -32,13 +32,21 @@ pokemonCard = (pokemon) => {
   const container = document.querySelector(".container");
   const div = document.createElement("div");
   div.classList.add("pokelist");
+
+  const typeColor = color[pokemon.types[0].type.name];
+  div.style.backgroundColor = typeColor;
+
+  const pokemonName = pokemon.name.toUpperCase();
+  const typeName = pokemon.types[0].type.name;
+
   const card = `<div>
   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"></img>
-  <h2>${pokemon.name}</h2>
+  <h2>${pokemonName}</h2>
+  <h3>${pokemon.types[0].type.name}</h3>
   </div>
   `;
   div.innerHTML = card;
-  container.append(div);
+  container.appendChild(div);
 };
 
 fetchAllPokemon();
