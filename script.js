@@ -37,11 +37,10 @@ pokemonCard = (pokemon) => {
   div.style.backgroundColor = typeColor;
 
   const pokemonName = pokemon.name.toUpperCase();
-  const typeName = pokemon.types[0].type.name;
 
   const card = `<div>
   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"></img>
-  <h2>${pokemonName}</h2>
+  <h2>${pokemon.id} - ${pokemonName}</h2>
   <h3>${pokemon.types[0].type.name}</h3>
   </div>
   `;

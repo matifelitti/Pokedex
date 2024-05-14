@@ -1,6 +1,4 @@
 .pokelist {
-  width: 200px;
-  height: 250px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -10,12 +8,19 @@
 }
 
 .pokelist img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: rgb(167, 163, 163);
 }
 
 .pokelist h2 {
   font-size: 20px;
-  margin: 5px 0;
+  margin: 2px 0;
+}
+
+.pokelist h3 {
+  font-size: 15px;
+  margin: 3px 0;
 }
