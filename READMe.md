@@ -5,9 +5,13 @@ This project is a simple Pokedex application.
 ## Features
 
 - Displays Pokémon cards with:
-  - Images
-  - Names
-  - Types
+  - Image
+  - Name
+  - Type
+  - HP
+  - Attack
+  - Defense
+  - Speed
 
 ## Technologies Used
 
