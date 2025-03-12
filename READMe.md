@@ -1,6 +1,3 @@
-Here's the improved README.md with instructions on how to clone the repository and open the project:  
-
----
 
 # 🔴 Pokédex Application  
 
