@@ -44,7 +44,7 @@ const displayPokemon = (pokemonList) => {
 
   pokemonList.forEach((pokemon) => {
     const div = document.createElement("div");
-    div.classList.add("pokelist");
+    div.classList.add("pokelist", "scroll-fade");
 
     const typeColor = color[pokemon.types[0].type.name];
     div.style.backgroundColor = typeColor;
@@ -60,9 +60,9 @@ const displayPokemon = (pokemonList) => {
 
     const card = `
       <div>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-          pokemon.id
-        }.png" loading="lazy" alt="${pokemonName}">
+        <img src="${
+          pokemon.sprites.front_default
+        }" loading="lazy" alt="${pokemonName}">
         <h2>${pokemon.id} - ${pokemonName}</h2>
         <h3>Type :  ${pokemon.types[0].type.name}</h3>
         <div class="stats">
@@ -96,6 +96,8 @@ const displayPokemon = (pokemonList) => {
 
     div.innerHTML = card;
     container.appendChild(div);
+
+    observer.observe(div);
   });
 };
 
@@ -121,3 +123,21 @@ function filterPokemon() {
 
   displayPokemon(filtered);
 }
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+document.querySelectorAll(".scroll-fade").forEach((el) => {
+  observer.observe(el);
+});
