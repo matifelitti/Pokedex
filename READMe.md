@@ -17,10 +17,10 @@ This project is a **simple and interactive Pokédex** that displays Pokémon det
 ## 📂 Project Structure
 
 📁 project-folder/
-├── index.html
-├── README.md
-├── script.js
-├── styles.css
+└── index.html
+└── README.md
+└── script.js
+└── styles.css
 
 ## 🛠️ Technologies Used
 
