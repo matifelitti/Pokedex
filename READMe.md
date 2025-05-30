@@ -14,6 +14,14 @@ This project is a **simple and interactive Pokédex** that displays Pokémon det
   - 💨 **Speed**
 - **📊 Responsive Design** – Ensures a smooth experience across different screen sizes.
 
+## 📂 Project Structure
+
+📁 project-folder/
+├── index.html
+├── README.md
+├── script.js
+├── styles.css
+
 ## 🛠️ Technologies Used
 
 - **HTML5** – For structuring the application.
@@ -25,8 +33,8 @@ This project is a **simple and interactive Pokédex** that displays Pokémon det
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/matifelitti/pokedex-app.git
-cd pokedex-app
+git clone https://github.com/matifelitti/Pokedex.git
+cd Pokedex
 ```
 
 ### 2️⃣ Open the Project
